@@ -1,7 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:eduguard/src/features/onboarding/screens/onboarding.dart';
+import 'package:eduguard/src/features/sos_system/screens/sos_audioprediction.dart';
 import 'package:flutter/material.dart';
 import 'package:eduguard/src/features/sos_system/screens/sos_homepage.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,13 +16,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "EduguardLK",
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: OnboardingScreen(),
       );
   }
 }
@@ -36,8 +39,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
    List<Widget> featureHomePages =[
     SOSHomePage(),//Text('Home', style:TextStyle(fontSize: 20.0)),
-    Text('Education', style:TextStyle(fontSize: 20.0)),
-    Text('Blogs', style:TextStyle(fontSize: 20.0)),
+    PredictionPage(),
+    //OnboardingScreen(),
+    //PackageInfoScreen(),
+    //Text('Education', style:TextStyle(fontSize: 20.0)),
+    //Text('Blogs', style:TextStyle(fontSize: 20.0)),
     Text('Questionnare', style:TextStyle(fontSize: 20.0)),
     Text('Health', style:TextStyle(fontSize: 20.0)),
    ];
@@ -74,12 +80,12 @@ class _MyHomePageState extends State<MyHomePage> {
         indicatorColor: Colors.teal[300],
         destinations: <NavigationDestination>[
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.home), label: 'Education'),
+          NavigationDestination(icon: Icon(Icons.book), label: 'Education'),
           NavigationDestination(icon: Icon(Icons.home), label: 'Blogs'),
           NavigationDestination(icon: Icon(Icons.home), label: 'Questionnare'),
           NavigationDestination(icon: Icon(Icons.home), label: 'Health'),
         ],
-      )
+      ),
     );
   }
 }
