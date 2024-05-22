@@ -3,7 +3,6 @@
 import 'package:eduguard/src/features/onboarding/controllers/onboarding_controller.dart';
 import 'package:eduguard/src/utils/constants/image_strings.dart';
 import 'package:eduguard/src/utils/constants/text_strings.dart';
-import 'package:eduguard/src/utils/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:eduguard/src/common_widgets/appbar.dart';
 import 'package:eduguard/src/features/sos_system/screens/sos_chat.dart';
 import 'package:eduguard/src/features/sos_system/screens/sos_location.dart';
 import 'package:eduguard/src/features/sos_system/screens/sos_settings.dart';
@@ -27,6 +28,17 @@ class _SOSHomePageState extends State<SOSHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      //Custom Appbar
+      appBar: CustomAppBar(
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Hello from sos home page, Matteo Perera...', style: TextStyle(fontSize: 14.0, color:Colors.grey),),
+            Text('Emergency SOS System.', style: TextStyle(fontSize: 16.0),)
+          ],
+        ),
+      ),
 
       body: Container(
         padding: EdgeInsets.fromLTRB(20, 30, 20, 10),

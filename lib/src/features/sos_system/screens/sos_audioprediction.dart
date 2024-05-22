@@ -1,10 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'dart:developer';
-
 import 'package:eduguard/src/features/sos_system/handle_api.dart';
 import 'package:eduguard/src/features/sos_system/handle_audio.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class PredictionPage extends StatefulWidget {

@@ -1,8 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-
-import 'dart:io';
-import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:record/record.dart';
 
@@ -30,7 +26,7 @@ class AudioRecorderService {
       bitRate: 128000, //Bit rate
     );
 
-    await _recorder.start(config, path: _filePath!);
+    await _recorder.start(config, path: _filePath);
 
     // //Stop recording after 5 seconds
     // Future.delayed(Duration(seconds: 5), () async {
